@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ValeApp</string>
+
+    <string-array name="pruebaMaterial">
+        <item>Rodillo chiporro</item>
+        <item>Brocha 10"</item>
+        <item>Marco de cierra</item>
+    </string-array>
+
+</resources>
+
+

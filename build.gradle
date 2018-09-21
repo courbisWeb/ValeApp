@@ -1,0 +1,39 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+
+
+    
+    repositories {
+        maven {
+            url "https://maven.google.com"
+        }
+        //google()  //only if you use Android Studio 3.x
+
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.1.4'
+        //implementation 'com.google.android.gms:play-services:15.0.2'//Acceso a la plataforma de GooglePlay
+        //implementation 'com.google.android.gms:play-services-vision:15.0.2'//Acceso codigoQR Google
+        //implementation 'com.google.android.gms:play-services-vision:15.0.2'//Se actualiza automaticamente
+//        compile 'me.dm7.barcodescanner:zxing:1.8.4'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        maven {
+            url "https://maven.google.com"
+        }
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

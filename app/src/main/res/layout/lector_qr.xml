@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/textViewRut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/textViewRutNone"
+        android:layout_marginStart="207dp"
+        android:ellipsize="end"
+        android:hint="12.345.678-9" />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <SurfaceView
+            android:id="@+id/camera_view"
+            android:layout_width="640px"
+            android:layout_height="480px"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewRutNone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="331dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="10dp"
+        android:ellipsize="end"
+        android:text="Rut:" />
+
+    <Button
+        android:id="@+id/buttonQR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewNombreEmpresaColaborador"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Actualizar datos" />
+
+    <TextView
+        android:id="@+id/textViewTituloQR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="DATOS DEL COLABORADOR"
+        android:textSize="30sp"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/textViewNombreNone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textViewRutNone"
+        android:layout_below="@+id/textViewRut"
+        android:layout_marginTop="10dp"
+        android:text="Nombre:" />
+
+    <TextView
+        android:id="@+id/textViewNombreColaborador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textViewRut"
+        android:layout_alignTop="@+id/textViewNombreNone"
+        android:hint="Juan Perez" />
+
+    <TextView
+        android:id="@+id/textViewCargoNone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textViewRutNone"
+        android:layout_below="@+id/textViewNombreNone"
+        android:layout_marginTop="10dp"
+        android:text="Cargo:" />
+
+    <TextView
+        android:id="@+id/textViewCargoColaborador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textViewRut"
+        android:layout_below="@+id/textViewNombreNone"
+        android:layout_marginTop="10dp"
+        android:hint="Albañil" />
+
+    <TextView
+        android:id="@+id/textViewEmpresaNone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textViewRutNone"
+        android:layout_below="@+id/textViewCargoNone"
+        android:layout_marginTop="10dp"
+        android:text="Empresa:" />
+
+    <TextView
+        android:id="@+id/textViewEmpresaColaborador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textViewRut"
+        android:layout_below="@+id/textViewCargoNone"
+        android:layout_marginTop="10dp"
+        android:hint="Mandante" />
+
+    <TextView
+        android:id="@+id/textViewNombreEmpresaColaborador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textViewRut"
+        android:layout_below="@+id/textViewEmpresaNone"
+        android:layout_marginTop="10dp"
+        android:hint="Constructora" />
+
+    <TextView
+        android:id="@+id/textViewNombreEmpresaNone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textViewRutNone"
+        android:layout_below="@+id/textViewEmpresaNone"
+        android:layout_marginTop="10dp"
+        android:text="Nombre Empresa:" />
+
+</RelativeLayout>
