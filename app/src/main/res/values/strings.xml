@@ -2,6 +2,7 @@
     <string name="app_name">ValeApp</string>
 
     <string-array name="pruebaMaterial">
+        <item>Seleccionar material</item>
         <item>Rodillo chiporro</item>
         <item>Brocha 10"</item>
         <item>Marco de cierra</item>
