@@ -1,138 +1,185 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
-    android:padding="16dp">
-
-    <TextView
-        android:id="@+id/textViewRut"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignTop="@+id/textViewRutNone"
-        android:layout_marginStart="207dp"
-        android:ellipsize="end"
-        android:hint="12.345.678-9" />
+    android:padding="16dp"
+    android:background="#F2F2F2"
+    >
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="wrap_content"
+        android:id="@+id/layout_surface_cam"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="40dp"
+        android:background="@drawable/border"
         android:orientation="horizontal"
         android:padding="8dp">
 
         <SurfaceView
             android:id="@+id/camera_view"
-            android:layout_width="640px"
+            android:layout_width="match_parent"
             android:layout_height="480px"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true" />
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/textViewRutNone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="331dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="10dp"
-        android:ellipsize="end"
-        android:text="Rut:" />
-
-    <Button
-        android:id="@+id/buttonQR"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textViewNombreEmpresaColaborador"
+    <RelativeLayout
+        android:id="@+id/layout_colaborador"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_surface_cam"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:text="Actualizar datos" />
+        android:layout_marginTop="20dp"
+        android:background="#FAFAFA">
 
-    <TextView
-        android:id="@+id/textViewTituloQR"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:text="DATOS DEL COLABORADOR"
-        android:textSize="30sp"
-        android:textStyle="bold|italic" />
+        <TextView
+            android:id="@+id/textViewRutNone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView4"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Rut:"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/textViewNombreNone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/textViewRutNone"
-        android:layout_below="@+id/textViewRut"
-        android:layout_marginTop="10dp"
-        android:text="Nombre:" />
+        <TextView
+            android:id="@+id/textViewNombreNone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textViewRutNone"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Nombre:"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/textViewNombreColaborador"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/textViewRut"
-        android:layout_alignTop="@+id/textViewNombreNone"
-        android:hint="Juan Perez" />
+        <TextView
+            android:id="@+id/textViewEmpresaNone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textViewNombreNone"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Empresa:"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/textViewCargoNone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/textViewRutNone"
-        android:layout_below="@+id/textViewNombreNone"
-        android:layout_marginTop="10dp"
-        android:text="Cargo:" />
+        <TextView
+            android:id="@+id/textViewNombreEmpresaNone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textViewEmpresaNone"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Nombre empresa:"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/textViewCargoColaborador"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/textViewRut"
-        android:layout_below="@+id/textViewNombreNone"
-        android:layout_marginTop="10dp"
-        android:hint="Albañil" />
+        <TextView
+            android:id="@+id/textViewCargoNone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textViewNombreEmpresaNone"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Cargo:"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/textViewEmpresaNone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/textViewRutNone"
-        android:layout_below="@+id/textViewCargoNone"
-        android:layout_marginTop="10dp"
-        android:text="Empresa:" />
+        <EditText
+            android:id="@+id/editTextRut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toEndOf="@+id/textViewRutNone"
+            android:ems="10"
+            android:hint="12345678-9"
+            android:inputType="number"
+            android:shadowColor="#2ECCFA"
+            android:textColor="#000000"
+            android:textColorHighlight="#2ECCFA"
+            android:textColorLink="#2ECCFA"
+            android:textSize="15sp" />
 
-    <TextView
-        android:id="@+id/textViewEmpresaColaborador"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/textViewRut"
-        android:layout_below="@+id/textViewCargoNone"
-        android:layout_marginTop="10dp"
-        android:hint="Mandante" />
+        <TextView
+            android:id="@+id/textViewNombreColaborador"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/textViewNombreNone"
+            android:layout_marginLeft="10dp"
+            android:layout_toEndOf="@+id/textViewNombreNone"
+            android:hint="Nombre Colaborador"
+            android:textColor="#000000"
+            android:textSize="15sp" />
 
-    <TextView
-        android:id="@+id/textViewNombreEmpresaColaborador"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/textViewRut"
-        android:layout_below="@+id/textViewEmpresaNone"
-        android:layout_marginTop="10dp"
-        android:hint="Constructora" />
+        <TextView
+            android:id="@+id/textViewEmpresaColaborador"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/textViewEmpresaNone"
+            android:layout_marginLeft="10dp"
+            android:layout_toEndOf="@+id/textViewEmpresaNone"
+            android:hint="Casa o Contratista"
+            android:textColor="#000000"
+            android:textSize="15sp" />
 
-    <TextView
-        android:id="@+id/textViewNombreEmpresaNone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/textViewRutNone"
-        android:layout_below="@+id/textViewEmpresaNone"
-        android:layout_marginTop="10dp"
-        android:text="Nombre Empresa:" />
+        <TextView
+            android:id="@+id/textViewNombreEmpresaColaborador"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/textViewNombreEmpresaNone"
+            android:layout_marginLeft="10dp"
+            android:layout_toEndOf="@+id/textViewNombreEmpresaNone"
+            android:hint="Nombre de la empresa"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/textViewCargoColaborador"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/textViewCargoNone"
+            android:layout_marginLeft="10dp"
+            android:layout_toEndOf="@+id/textViewCargoNone"
+            android:hint="Cargo"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+
+        <ImageButton
+            android:id="@+id/buttonQR"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btnListo"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/button_background"
+            app:srcCompat="@android:drawable/ic_search_category_default" />
+
+        <Button
+            android:id="@+id/btnListo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/button_background"
+            android:text="Listo" />
+
+    </RelativeLayout>
+
 
 </RelativeLayout>

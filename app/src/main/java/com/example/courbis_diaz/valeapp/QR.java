@@ -15,6 +15,8 @@ import android.view.SurfaceView;
 import android.view.View;
 import android.webkit.URLUtil;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -31,29 +33,29 @@ public class QR extends AppCompatActivity {
     private SurfaceView cameraView;
     private final int MY_PERMISSIONS_REQUEST_CAMERA = 1;
     private String token = "";
-    private TextView textViewRut;
+    private EditText editTextRut;
     private TextView textViewNombre;
     private TextView textViewCargo;
     private TextView textViewEmpresa;
     private TextView textViewNombreEmpresa;
-    private Button btnQR;
+    private ImageButton btnQR;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.lector_qr);
-        textViewRut=(TextView)findViewById(R.id.textViewRut);
+        editTextRut=(EditText) findViewById(R.id.editTextRut);
         textViewNombre=(TextView)findViewById(R.id.textViewNombreColaborador);
         textViewCargo=(TextView)findViewById(R.id.textViewCargoColaborador);
         textViewEmpresa=(TextView)findViewById(R.id.textViewEmpresaColaborador);
         textViewNombreEmpresa=(TextView)findViewById(R.id.textViewNombreEmpresaColaborador);
-        btnQR=(Button)findViewById(R.id.buttonQR);
+        btnQR=(ImageButton) findViewById(R.id.buttonQR);
         btnQR.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (token.length()>0){
                 if(token.equals("18.356.676-8")){
-                    textViewRut.setText(token);
+                    editTextRut.setText(token);
                     textViewNombre.setText("Julio Courbis");
                     textViewCargo.setText("Yesero");
                     textViewEmpresa.setText("Contratista");

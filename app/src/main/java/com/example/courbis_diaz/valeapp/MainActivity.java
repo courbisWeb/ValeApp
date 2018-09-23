@@ -1,9 +1,7 @@
 package com.example.courbis_diaz.valeapp;
 
-import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.speech.RecognizerIntent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -23,20 +21,19 @@ import com.example.courbis_diaz.valeapp.Adaptador.AdaptadorListaVale;
 import com.example.courbis_diaz.valeapp.Entidad.ListaVale;
 
 import java.util.ArrayList;
-import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
 private AutoCompleteTextView material;
-    private static final int REQ_CODE_SPEECH_INPUT=100;
-private ImageButton entradaVoz;
+//private static final int REQ_CODE_SPEECH_INPUT=100;
+//private ImageButton entradaVoz;
 private Spinner spinnerElemento;
 private ListView lista;
 private EditText textElemento;
 private ArrayList<ListaVale> item=new ArrayList<ListaVale>();;
 private EditText cantidad;
 private AdaptadorListaVale adapter;
-private Button crearVale;
+private ImageButton crearVale;
 
 /*Listado temporal de materiales*/
 private static final String[] materiales=new String[]{
@@ -51,9 +48,9 @@ private static final String[] materiales=new String[]{
         lista=(ListView) findViewById(R.id.listvale);
         //textElemento=(EditText) findViewById(R.id.editTextElemento);
         spinnerElemento=(Spinner) findViewById(R.id.spinnerElemento);
-        cantidad=(EditText) findViewById(R.id.editTextCantidad);
-        entradaVoz=(ImageButton) findViewById(R.id.imageButtonEntradaVoz);
-        crearVale=(Button)findViewById(R.id.crearVale);
+        cantidad=(EditText) findViewById(R.id.editTextRut);
+        //entradaVoz=(ImageButton) findViewById(R.id.imageButtonEntradaVoz);
+        crearVale=(ImageButton) findViewById(R.id.crearVale);
 
         crearVale.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,13 +68,13 @@ private static final String[] materiales=new String[]{
         /*Fin AutoComplete*/
 
 
-        entradaVoz.setOnClickListener(new View.OnClickListener() {
+      /*  entradaVoz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 EntradaDeVoz();
             }
-        });
+        });*/
 
        spinnerElemento.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -144,7 +141,7 @@ private static final String[] materiales=new String[]{
         material.setText(spinnerElemento.getSelectedItem().toString());
     }
 
-    public void EntradaDeVoz()
+    /*public void EntradaDeVoz()
     {
 
         Intent intent=new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
@@ -159,9 +156,9 @@ private static final String[] materiales=new String[]{
         }
 
 
-    }
+    }*/
 
-    @Override
+    /*@Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
@@ -174,7 +171,7 @@ private static final String[] materiales=new String[]{
             }
         }
 
-    }
+    }*/
 }
 
 
