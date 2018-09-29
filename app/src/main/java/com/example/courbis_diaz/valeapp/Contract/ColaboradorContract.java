@@ -4,6 +4,8 @@ import android.provider.BaseColumns;
 
 public class ColaboradorContract {
 
+
+
     public static abstract class colaboradorEntry implements BaseColumns{
         public static final String TABLE_NAME="colaborador";
 

@@ -12,6 +12,7 @@ public class EmpresaContract {
         public static final String direccion="direccion";
         public static final String comuna="comuna";
         public static final String tipo="tipo";
+        public static final String razonSocial="razon_social";
     }
 
 }

@@ -7,13 +7,15 @@ public class Empresa {
     private String direccion;
     private int comuna;
     private int tipo;
+    private String razonSocial;
 
-    public Empresa(int id, String rut, String direccion, int comuna, int tipo) {
+    public Empresa(int id, String rut, String direccion, int comuna, int tipo, String razonSocial) {
         this.id = id;
         this.rut = rut;
         this.direccion = direccion;
         this.comuna = comuna;
         this.tipo = tipo;
+        this.razonSocial = razonSocial;
     }
 
     public int getId() {
@@ -54,5 +56,13 @@ public class Empresa {
 
     public void setTipo(int tipo) {
         this.tipo = tipo;
+    }
+
+    public String getRazonSocial() {
+        return razonSocial;
+    }
+
+    public void setRazonSocial(String razonSocial) {
+        this.razonSocial = razonSocial;
     }
 }

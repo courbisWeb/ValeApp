@@ -2,6 +2,7 @@ package com.example.courbis_diaz.valeapp;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -18,6 +19,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.courbis_diaz.valeapp.Adaptador.AdaptadorListaVale;
+import com.example.courbis_diaz.valeapp.DB.DataBase;
 import com.example.courbis_diaz.valeapp.Entidad.ListaVale;
 
 import java.util.ArrayList;
@@ -51,6 +53,11 @@ private static final String[] materiales=new String[]{
         cantidad=(EditText) findViewById(R.id.editTextRut);
         //entradaVoz=(ImageButton) findViewById(R.id.imageButtonEntradaVoz);
         crearVale=(ImageButton) findViewById(R.id.crearVale);
+
+        DataBase dataBase= new DataBase(this);
+        SQLiteDatabase db=dataBase.getWritableDatabase();
+
+
 
         crearVale.setOnClickListener(new View.OnClickListener() {
             @Override
